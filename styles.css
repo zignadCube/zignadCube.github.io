@@ -1,0 +1,146 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0a0a0a;
+  color: #d4ffd4;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+header h1 {
+  font-size: 3.2rem;
+  color: #7aff7a;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+header p {
+  color: #9fff9f;
+  font-size: 1.2rem;
+  margin-top: 8px;
+}
+
+/* Section Headings */
+.menu-section {
+  margin-bottom: 50px;
+}
+
+.menu-section h2 {
+  font-size: 2rem;
+  color: #6aff6a;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #33cc33;
+}
+
+/* Menu List Styles */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  background-color: #151515;
+  border: 1px solid #2d2d2d;
+  border-left: 6px solid #33cc33;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px rgba(50, 255, 50, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(80, 255, 80, 0.2);
+}
+
+/* Item Name and Price */
+.item-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  color: #e4ffe4;
+}
+
+/* Description */
+.desc {
+  font-size: 0.95rem;
+  color: #b2ffb2;
+  margin-top: 6px;
+  padding-left: 3px;
+}
+
+/* Contact Section */
+.contact p,
+.menu-section p {
+  font-size: 1rem;
+  color: #caffc8;
+  margin-top: 8px;
+}
+
+/* Contact Highlight */
+.contact strong {
+  color: #7aff7a;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2.4rem;
+  }
+
+  .item-name {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .item-name .price {
+    align-self: flex-end;
+    color: #aaffaa;
+  }
+}
+/* Menu List - Grid Layout on Large Screens */
+ul {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: 1fr; /* default: 1 column */
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  ul {
+    grid-template-columns: 1fr 1fr; /* 2 columns on tablets and up */
+  }
+}
+
+@media (min-width: 1200px) {
+  ul {
+    grid-template-columns: 1fr 1fr 1fr; /* 3 columns on big screens */
+  }
+}
